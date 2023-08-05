@@ -26,8 +26,8 @@ export default Messages = () => {
 
   return (
     <SafeAreaView>
-      <View style={{backgroundColor:"#F6F9FA",height:"100%"}}>
         <TopHeader />
+      <View style={{backgroundColor:"#F6F9FA",height:"100%",marginTop:1}}>
         {
           DATA.map(item => {
               return(

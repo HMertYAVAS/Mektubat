@@ -44,13 +44,14 @@ export default PeopleDiscoverCard = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#E9F6FE",
+    backgroundColor: "#f7fbff",
     flexDirection: "row",
-    borderBottomColor: "black",
+    borderBottomColor: "#38B6FF",
     marginBottom: width * 0.002,
     paddingVertical: width * 0.01,
     paddingHorizontal: width * 0.02,
     alignItems: "center",
+    borderBottomWidth:0.5
   },
   nickName: {
     flex: 2,
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     width: width * 0.08,
     height: width * 0.08,
     borderRadius: width * 0.04,
-    backgroundColor: "#1111",
+    backgroundColor: "#75C9FA",
     marginTop: width * 0.02,
     marginLeft: "auto",
     marginRight: width * 0.02,

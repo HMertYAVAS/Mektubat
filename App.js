@@ -9,6 +9,8 @@ import { ThemeProvider } from "react-native-elements";
 import Profile from "./src/Tabs/Profile";
 import Messages from "./src/Tabs/Messages";
 import People from "./src/Tabs/People";
+import LoginPage from "./src/pages/LoginPage";
+import ResponsiveLoginComponent from "./src/component/ResponsiveLoginComponent";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -88,10 +90,12 @@ function Home() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator >
+      <Stack.Navigator initialRouteName="LoginPage">
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
         <Stack.Screen name="Messages" component={Messages} options={{ headerShown: false }} />
         <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+        <Stack.Screen name="LoginPage" component={LoginPage} options={{ headerShown: false }} />
+        <Stack.Screen name="ResponsiveLoginPage" component={ResponsiveLoginComponent} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

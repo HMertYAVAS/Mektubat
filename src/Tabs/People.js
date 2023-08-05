@@ -59,8 +59,8 @@ const DATA = [
 export default People = () => {
   return (
     <SafeAreaView>
-      <View style={{ backgroundColor: "#F6F9FA", height: "100%" }}>
         <TopHeader />
+      <View style={{ backgroundColor: "#F6F9FA", height: "100%",marginTop:1 }}>
         <ScrollView horizontal="false" onMomentumScrollEnd={()=>console.log("This is rendered new peoples")} >
           {DATA.map((item) => {
             return <PeopleDiscoverCard id={item.id} title={item.title} />;

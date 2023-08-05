@@ -8,7 +8,7 @@ export default ProfileComponent = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.settingsButton}>
-        <Icon name="settings-outline" size={30} color="#666" />
+        <Icon name="settings-outline" size={30} color="#75C9FA" />
       </TouchableOpacity>
       <Image
         source={{
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontSize: width * 0.06,
     fontWeight: "bold",
     marginBottom: width * 0.03,
+    color:"#0099ff"
   },
   age: {
     fontSize: width * 0.04,
