@@ -11,6 +11,15 @@ import Messages from "./src/Tabs/Messages";
 import People from "./src/Tabs/People";
 import LoginPage from "./src/pages/LoginPage";
 import ResponsiveLoginComponent from "./src/component/ResponsiveLoginComponent";
+import MessagesPeopleCard from "./src/component/MessagesPeopleCard";
+import ChatScreen from "./src/component/ChatScreen";
+import PeopleDiscoverCard from "./src/component/PeopleDiscoverCard";
+import PeopleProfilePage from "./src/component/PeopleProfilePage";
+
+
+
+
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -96,6 +105,11 @@ export default function App() {
         <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
         <Stack.Screen name="LoginPage" component={LoginPage} options={{ headerShown: false }} />
         <Stack.Screen name="ResponsiveLoginPage" component={ResponsiveLoginComponent} options={{ headerShown: false }} />
+        <Stack.Screen name="MessagesPeopleCard" component={MessagesPeopleCard} options={{ headerShown: false }} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="PeopleDiscoverCard" component={PeopleDiscoverCard} options={{ headerShown: false }} />
+        <Stack.Screen name="PeopleProfilePage" component={PeopleProfilePage} options={{ headerShown: false }} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

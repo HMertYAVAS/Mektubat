@@ -1,42 +1,37 @@
-import React from "react";
-import { View } from "react-native";
-import MessageCard from "../component/MessageCard";
+import React, { useState } from "react";
+import {
+  View,
+  StyleSheet
+} from "react-native";
+import MessagesPeopleCard from "../component/MessagesPeopleCard";
 import TopHeader from "../component/TopHeader";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
 export default Messages = () => {
+  const navigation = useNavigation(); // useNavigation kancasını kullanarak navigation prop'unu alın
 
-    const DATA = [
-        {
-            nickname:"alohamora",
-            lastMessage: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-        },
-        {
-            nickname:"fingardium",
-            lastMessage: "3ac68afc",
-
-        },
-        {
-            nickname:"Leviyossa",
-            lastMessage: "58694a0f-3da1-471f-bd96-145571e29d72",
-
-        },
-      ];
 
 
   return (
-    <SafeAreaView>
-        <TopHeader />
-      <View style={{backgroundColor:"#F6F9FA",height:"100%",marginTop:1}}>
-        {
-          DATA.map(item => {
-              return(
-                <MessageCard lastMessage={item.lastMessage} nickName={item.nickname}/>
-              )
-          })
-        }
-
+    <SafeAreaView style={styles.container}>
+      <TopHeader navigation={navigation} backButton={false}/>
+      <View
+        style={styles.contentContainer}
+      >
+        <MessagesPeopleCard navigation={navigation}/>
       </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#F6F9FA",
+    marginTop: 1,
+  },
+  contentContainer: {
+    flex: 1,
+  },
+});

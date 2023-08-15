@@ -22,8 +22,9 @@ export default ProfileComponent = () => {
         <Text style={styles.age}>28 years old</Text>
       </View>
       <View style={styles.bioContainer}>
-        <Text style={styles.bio}>
-          Hi, I'm John Doe. I love coding and exploring new technologies!
+        <Text numberOfLines={8} style={styles.bio}>
+          {/** En fazla 400 olmalı */}
+          Hi, I'm John Doe. I love coding and exploring new technologies!Hi, I'm John Doe. I love coding and exploring new technologies!Hi, I'm John Doe. I love coding and exploring new technologies!Hi, I'm John Doe. I love coding and exploring new technologies!Hi, I'm John Doe. I love coding and exploring new technologies!Hi, I'm John Doe. I love coding and exploring new technologies!Hi, I'm John Doe.
         </Text>
       </View>
       {/* Diğer bilgiler buraya eklenebilir */}

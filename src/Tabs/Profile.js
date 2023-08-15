@@ -5,11 +5,11 @@ import ProfileComponent from "../component/ProfileComponent";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ResponsiveBoxWithText from "../component/ResponsiveBoxWithText";
 
-export default Profile = () => {
+export default Profile = ({navigation}) => {
   return (
     <SafeAreaView>
       <View style={{ backgroundColor: "#F6F9FA", height: "100%" }}>
-        <TopHeader />
+      <TopHeader navigation={navigation} backButton={false} />
         <ProfileComponent />
       </View>
     </SafeAreaView>
